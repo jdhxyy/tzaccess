@@ -1,4 +1,4 @@
-module tzaccess
+module github.com/jdhxyy/tzaccess
 
 go 1.12
 
