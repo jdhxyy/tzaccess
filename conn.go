@@ -25,33 +25,33 @@ func init() {
 
 // dealAckConnectParentRouter 处理应答连接帧
 // 返回值是应答数据和应答标志.应答标志为false表示不需要应答
-func dealAckConnectParentRouter(req []uint8, params ...interface{}) ([]uint8, bool) {
+func dealAckConnectParentRouter(req []uint8, params ...interface{}) []uint8 {
 	if len(params) != 1 {
 		lagan.Warn(tag, "deal conn failed.params len is wrong:%d", len(params))
-		return nil, false
+		return nil
 	}
 
 	addr := params[0].(*net.UDPAddr)
 	if addr.IP.Equal(parent.addr.IP) == false || addr.Port != parent.addr.Port {
 		lagan.Warn(tag, "deal conn failed.ip is not match.ip:%v core ip:%v", addr, coreAddr)
-		return nil, false
+		return nil
 	}
 
 	if len(req) == 0 {
 		lagan.Warn(tag, "deal conn failed.payload len is wrong:%d", len(req))
-		return nil, false
+		return nil
 	}
 
 	j := 0
 	if req[j] != 0 {
 		lagan.Warn(tag, "deal conn failed.error code:%d", req[j])
-		return nil, false
+		return nil
 	}
 	j++
 
 	if len(req) != 2 {
 		lagan.Warn(tag, "deal conn failed.payload len is wrong:%d", len(req))
-		return nil, false
+		return nil
 	}
 
 	connNum = 0
@@ -59,7 +59,7 @@ func dealAckConnectParentRouter(req []uint8, params ...interface{}) ([]uint8, bo
 	parent.cost = req[j]
 	parent.timestamp = time.Now().Unix()
 	lagan.Info(tag, "conn success.parent ia:0x%x cost:%d", parent.ia, parent.cost)
-	return nil, false
+	return nil
 }
 
 func connThread() {
