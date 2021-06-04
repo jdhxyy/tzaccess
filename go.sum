@@ -4,5 +4,5 @@ github.com/jdhxyy/knock v0.0.0-20210604000600-f7160a766d79 h1:szNkWPR0sLXOh/ebv1
 github.com/jdhxyy/knock v0.0.0-20210604000600-f7160a766d79/go.mod h1:jswTBkOcUEtJStgUFPGfEC7dvELpgweDtS01iYg3ySs=
 github.com/jdhxyy/lagan v0.0.0-20210411225308-30d428521fc7 h1:ix0JGWQOQAitrOrV8iar7a8EKVXKxveJ7VHMC5yGCak=
 github.com/jdhxyy/lagan v0.0.0-20210411225308-30d428521fc7/go.mod h1:thKkxhIW5/LKfiKOzNj/X+BU4LmlEZHRZPwT/EVFwqg=
-github.com/jdhxyy/utz v0.0.0-20210417100232-23c039ae9dfd h1:kRPAD3N7GeAkoWQvQ1A6YuX0tpKEvms2/q3DFud1RY0=
-github.com/jdhxyy/utz v0.0.0-20210417100232-23c039ae9dfd/go.mod h1:eKM112NP2qpGHq8Sh9RQIH42YobWXKja0AFhY/OKQCs=
+github.com/jdhxyy/utz v0.0.0-20210604030251-88e52c9758f4 h1:ElPsTNST53K86gDd27S+XjVq5mFG9F5aMea14dYqksI=
+github.com/jdhxyy/utz v0.0.0-20210604030251-88e52c9758f4/go.mod h1:eKM112NP2qpGHq8Sh9RQIH42YobWXKja0AFhY/OKQCs=
